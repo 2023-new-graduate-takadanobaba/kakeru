@@ -21,7 +21,7 @@ eclipse上で行うのかな？
 
 入力
 金額と日付を入力する
-bufferedreaderで金額と日付を別々に入力できるようにする
+bufferedreader r = new b(new InputStreamReader(System. in));で金額と日付を別々に入力できるようにする
 日付が先
 
 処理
@@ -30,7 +30,7 @@ bufferedreaderで金額と日付を別々に入力できるようにする
 
 日付のリストを記述する
 Listname.add("")で追加していく
-system.outでListnameに格納された内容をgListname.get(1)出力
+system.outでListnameに格納された内容をListname.get(1)を出力
 if文で分岐して何も入力されていないときは前回入力されたものを出力するように記述する。
 新しく入力された場合はプラス1して新しい場所に入力するようにする。
 
@@ -39,14 +39,19 @@ system.out「金額を入力してください」
 入力した日付と金額は別々に処理をする。
 金額用bufferedReaderを記述
 入力した内容をint型に変換
-金額の配列に格納
+金額の配列に格納 int[] sum = new int[100];
+格納方法sum[1] = 100;
 入力した内容をfor文で合計値を出せるようにする。
+for int i = 0; i < 100; i++;
+for (int value : sum);
 for文は配列に入っている一つ一つの内容を合計していく記述
 変数sumに合計値を格納
 変数sumをsystem.outに記述する。
 配列の次の要素を格納できるように配列の要素に＋１をして格納する場所を変える。
 
 コードの中全体をwhile文で囲み繰り返し入力できるようにする。
+while(条件式){
+}
 while文の内容は常にその条件を満たすものにする、何でもいい
 
 
