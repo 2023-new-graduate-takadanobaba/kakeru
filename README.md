@@ -25,19 +25,27 @@ bufferedreaderで金額と日付を別々に入力できるようにする
 日付が先
 
 処理
-system.outで日付をYYYY/MM/DD（年、月、日）の形式で入力してください
+system.outで日付をYYYYMMDD（年、月、日）の形式で入力してください
 
 日付用bufferedReaderを記述
 bufferedreader r = new b(new InputStreamReader(System. in));日付を入力できるようにする
 日付のリストを記述する
+num i = 0;
 List<Integer> list = new ArrayList<>();
+
+この方法のほうがいいかもしれない↓
+String str;
+List<String> dateArray = new ArrayList<String>();
+
 .add(num)で追加していく
+（dateArray.add("");
 system.outでListnameに格納された内容をListname.get(1)を出力
 if文で分岐して何も入力されていないときは前回入力されたものを出力するように記述する。
 新しく入力された場合はプラス1して新しい場所に入力するようにする。
 Array.sort(dateArray)で日付をsortする。
-これかCollections.sort(dateArray);だね
-
+これができない場合
+Collections.sort(dateArray);
+      
 
 
 system.out「金額を入力してください」
@@ -77,4 +85,5 @@ system.outで入力された金額と日付を両方出力する。
 
 動作確認
 コンソール上に入力して実際の金額の合計が出力されるか確認する。
+
 
