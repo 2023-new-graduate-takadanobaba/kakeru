@@ -28,48 +28,42 @@
      -  日付が先
 
 -  処理
-     -  system.outで日付をYYYYMMDD（年、月、日）の形式で入力してください
 
-     -  日付用bufferedReaderを記述
+  - 日付用bufferedReaderを記述
+     -  system.outで日付をYYYYMMDD（年、月、日）の形式で入力してください
      -  bufferedreader r = new b(new InputStreamReader(System. in));日付を入力できるようにする
      -  日付のリストを記述する
-     -  num i = 0;
-     -  List<Integer> list = new ArrayList<>();
-     -  
-     - この方法のほうがいいかもしれない↓
-     - String str;
-     - List<String> dateArray = new ArrayList<String>();
-        
-     - .add(num)で追加していく
-     -（dateArray.add("");
-     - system.outでListnameに格納された内容をListname.get(1)を出力
-     -  if文で分岐して何も入力されていないときは前回入力されたものを出力するように記述する。
-     -  新しく入力された場合はプラス1して新しい場所に入力するようにする。
-     -  array.sort(dateArray)で日付をsortする。
-     -  これができない場合
-     -  Collections.sort(dateArray);
-                        
+     -   - List<String> dateArray = new ArrayList<String>();
+     -  isStop = false; で記述してwhile文で囲んでisStop = trueの時にループを抜けるように記述する
+     -  trueになる条件は空をコンソール上で入力したときでisEmpty()をif文の条件式に記述してそのような挙動をするようにする。
+     -（dateArray.add(str);で追加していく
+     -  Collections.sort(dateArray);を入力して昇順に日付を整理する。
+　- 金額用bufferedReaderを記述                   
      - system.out「金額を入力してください」
-     - 入力した日付と金額は別々に処理をする。
-     - 金額用bufferedReaderを記述
      - 入力した内容をint型に変換
      - String str = r.readLine();
      - int num = Integer.parseInt(str);
-     - 金額の配列に格納 int[] sum = new int[100];
-     - 格納方法sum[1] = 100;
-     - 入力した内容をfor文で合計値を出せるようにする。
-     - sum = 0;
-     - for int i = 0; i < 100; i++;
-     - sum = sum + i;
-     - for (int value : sum);
-     - for文は配列に入っている一つ一つの内容を合計していく記述
-     - 変数sumに合計値を格納
-     - 変数sumをsystem.outに記述する。
-     - 配列の次の要素を格納できるように配列の要素に＋１をして格納する場所を変える。
-                                
-     - コードの中全体をwhile文で囲み繰り返し入力できるようにする。
-     - while(条件式){} 
-     - while文の内容は常にその条件を満たすものにする、何でもいい
+     - 金額のリストに格納
+     - List<Integer> listFee = new ArrayList<>();
+     - isStop1 = false; で記述してwhile文で囲んでisStop1 = trueの時にループを抜けるように記述する
+     - trueになる条件は空をコンソール上で入力したときでisEmpty()をif文の条件式に記述してそのような挙動をするようにする。
+     -  - if文でfalseだった場合にstrをInteger型に変換する記述を書く。（書かないとエラーになるため）
+     - else {
+	   int numm = Integer.parseInt(strr);
+       listFee.add(numm);
+
+     -System.out.println(dateArray.get(0) + listFee.get(0)+"円です");
+     -を記述することでdateArrayとlistFeeのリストに入ったデータの最初の値を取り出す。
+     -if文で分岐してdateArrayに要素が格納されない場合でも記述を省略できるようにする。
+     -dateArray.size() == 2 と記述することで要素が省略することができる。
+     -if (listFee.size() > 1 && dateArray.size() > 2 ) {
+			System.out.println(dateArray.get(1) + listFee.get(1)+ "円です");
+	 -if (listFee.size() > 1 && dateArray.size() == 2) {
+			System.out.println("上記の日付で"+ listFee.get(1)+ "円です");
+     - int sum = listFee.stream().mapToInt(Integer::intValue).sum();
+     - 上記のようなlistFeeに格納された値をすべて合計する記述を書きSystem.outで出力して終了。
+	 - System.out.println("すべての合計金額は"+ sum +"円です");
+
 
 
    -出力
