@@ -25,8 +25,29 @@ public class Test {
 			if (str.isEmpty()) {
 				isStop = true;
 			}
+//			Collections.sort(dateArray);//これを記述することによってdateArray.get(0)が消えるバグが発生する。
 
 		}
+//		boolean isStop = false;
+//
+//		while (!isStop) {
+//
+//			String str = reader.readLine();
+//			
+//			if (str.isEmpty()) {
+//				isStop = true;
+//			}
+//			
+//			else {
+//	
+//			int num = Integer.parseInt(str);
+//
+//			dateArray.add(num);
+//
+//
+//			}
+//			
+//		}
 
 		System.out.println("金額を入力してください（円は記入しなくて良い");
 
