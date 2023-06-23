@@ -52,17 +52,17 @@
 	   int numm = Integer.parseInt(strr);
        listFee.add(numm);
 
-     -System.out.println(dateArray.get(0) + listFee.get(0)+"円です");
-     -を記述することでdateArrayとlistFeeのリストに入ったデータの最初の値を取り出す。
-     -if文で分岐してdateArrayに要素が格納されない場合でも記述を省略できるようにする。
-     -dateArray.size() == 2 と記述することで要素が省略することができる。
-     -if (listFee.size() > 1 && dateArray.size() > 2 ) {
+     - System.out.println(dateArray.get(0) + listFee.get(0)+"円です");
+     - を記述することでdateArrayとlistFeeのリストに入ったデータの最初の値を取り出す。
+     - if文で分岐してdateArrayに要素が格納されない場合でも記述を省略できるようにする。
+     - dateArray.size() == 2 と記述することで要素が省略することができる。
+     - if (listFee.size() > 1 && dateArray.size() > 2 ) {
 			System.out.println(dateArray.get(1) + listFee.get(1)+ "円です");
-	 -if (listFee.size() > 1 && dateArray.size() == 2) {
+     - if (listFee.size() > 1 && dateArray.size() == 2) {
 			System.out.println("上記の日付で"+ listFee.get(1)+ "円です");
      - int sum = listFee.stream().mapToInt(Integer::intValue).sum();
      - 上記のようなlistFeeに格納された値をすべて合計する記述を書きSystem.outで出力して終了。
-	 - System.out.println("すべての合計金額は"+ sum +"円です");
+　　 - System.out.println("すべての合計金額は"+ sum +"円です");
 
 
 
